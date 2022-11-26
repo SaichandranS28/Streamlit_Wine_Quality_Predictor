@@ -41,7 +41,7 @@ def Wine_quality_prediction(input_data):
     print(prediction)
 
     if (prediction[0]==3):
-        return 'Very Bad Quality Wine'
+        return 'Cheap Quality Wine'
     elif(prediction[0]==4):
         return 'Bad Quality Wine'
     elif(prediction[0]==5):
@@ -50,8 +50,8 @@ def Wine_quality_prediction(input_data):
         return 'Normal Quality Wine'
     elif(prediction[0]==7):
         return 'Good Quality Wine'
-    else:
-        return 'Very Good Quality Wine' 
+    elif(prediction[0]>=8):
+        return 'Best Quality Wine' 
   
 def main():
     
