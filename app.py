@@ -11,7 +11,7 @@ import streamlit as st
 import base64
 
 #loading the saved model
-loaded_model = pickle.load(open('trained_model_final.sav','rb'))
+loaded_model = pickle.load(open('C:/Users/user/Desktop/Wine Quality Predictor/Sreamlit UI & Heroku deploy/trained_model_final.sav','rb'))
 
 
 def add_bg_from_local(image_file):
@@ -66,23 +66,23 @@ def main():
 
     with col1:
         
-        fixedacidity = st.text_input("FIXED ACIDITY :")
-        volatile = st.text_input('VOLATILE ACIDITY:')
-        citricacid = st.text_input('CITRIC ACID :')
-        residualsugar = st.text_input('RESIDUAL SUGAR:')
+        fixedacidity = st.text_input("FIXED ACIDITY :",value="5.6")
+        volatile = st.text_input('VOLATILE ACIDITY:',value="0.85")
+        citricacid = st.text_input('CITRIC ACID :',value="0.05")
+        residualsugar = st.text_input('RESIDUAL SUGAR:',value="1.4")
         
     with col2:
         
-        chlorides = st.text_input('CHLORIDES :')
-        free_sulfur_dioxide = st.text_input('FREE SULFUR DIOXIDE :')
-        total_sulfur_dioxide = st.text_input('TOTAL SULFUR DIOXIDE :')
-        density = st.text_input('DENSITY :')
+        chlorides = st.text_input('CHLORIDES :',value="0.045")
+        free_sulfur_dioxide = st.text_input('FREE SULFUR DIOXIDE :',value="12")
+        total_sulfur_dioxide = st.text_input('TOTAL SULFUR DIOXIDE :',value="88")
+        density = st.text_input('DENSITY :',value="0.9924")
               
     with col3:  
 
-        pH = st.text_input('pH :')
-        sulphates = st.text_input('SULPHATES :')
-        alcohol = st.text_input('ALCOHOL :')
+        pH = st.text_input('pH :',value="3.56")
+        sulphates = st.text_input('SULPHATES :',value="0.82")
+        alcohol = st.text_input('ALCOHOL :',value="12.9")
 
     
     #code for prediction
