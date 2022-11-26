@@ -11,7 +11,7 @@ import streamlit as st
 import base64
 
 #loading the saved model
-loaded_model = pickle.load(open('C:/Users/user/Desktop/Wine Quality Predictor/Sreamlit UI & Heroku deploy/trained_model_final.sav','rb'))
+loaded_model = pickle.load(open('trained_model_final.sav','rb'))
 
 
 def add_bg_from_local(image_file):
