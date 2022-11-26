@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Nov 25 15:54:20 2022
+Created on Mon Oct 17 22:39:25 2022
 
-@author: user
+@author: home
 """
 
 import numpy as np
@@ -11,7 +11,7 @@ import streamlit as st
 import base64
 
 #loading the saved model
-loaded_model = pickle.load(open('trained_model_final.sav','rb'))
+loaded_model = pickle.load(open('C:/Users/user/Desktop/Wine Quality Predictor/Sreamlit UI & Heroku deploy/trained_model_final.sav','rb'))
 
 
 def add_bg_from_local(image_file):
@@ -92,9 +92,11 @@ def main():
     if st.button('Click here to predict'):
         result = Wine_quality_prediction([fixedacidity,volatile,citricacid,residualsugar,chlorides,free_sulfur_dioxide,total_sulfur_dioxide,density,pH,sulphates,alcohol])
     
+        st.balloons()
+        st.success(result)
     
-    st.success(result)
-    
+    text_contents = (result+"\nThanks for using WINE QUALITY PREDICTOR WEB APP \n S Saichandran")
+    st.download_button('Download', text_contents)
     
 if __name__=='__main__':
     main()    
