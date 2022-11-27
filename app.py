@@ -92,7 +92,7 @@ def main():
     if st.button('Click here to predict'):
         result = Wine_quality_prediction([fixedacidity,volatile,citricacid,residualsugar,chlorides,free_sulfur_dioxide,total_sulfur_dioxide,density,pH,sulphates,alcohol])
     
-        st.snow()
+        st.balloons()
         st.success(result)
     
     text_contents = (result+"\nThanks for using WINE QUALITY PREDICTOR WEB APP \n S Saichandran")
